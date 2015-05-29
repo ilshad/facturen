@@ -1,0 +1,32 @@
+S		      ::= block+
+<block>               ::= paragraph | table
+
+paragraph             ::= paragraph-symbol <#"\n"> string+
+<paragraph-symbol>    ::= <":"> paragraph-tag
+<paragraph-tag>       ::= "paragraph"                 |
+	      	      	  "paragraph-right"           |
+	      	      	  "paragraph-left"            |
+	      	      	  "paragraph-bordered"        |
+	      	      	  "paragraph-bordered-right"  |
+	      	      	  "paragraph-bordered-left"   |
+	      	      	  "paragraph-centered"
+
+table		      ::= table-symbol <#"\n"> row+
+<table-symbol> 	      ::= <":"> table-tag
+<table-tag>    	      ::= "table" | "table-bordered"
+
+row           	      ::= row-symbol <#"\n"> cell+
+<row-symbol>   	      ::= <":"> row-tag
+<row-tag>      	      ::= "row" | "row-for"
+
+cell          	      ::= cell-symbol (<" "> string)
+<cell-symbol>  	      ::= <":"> cell-tag
+<cell-tag>     	      ::= "cell" | "cell-skip"
+
+<string>       	      ::= inline+ <#"\n">
+inline        	      ::= inline-symbol <" "> value
+<inline-symbol>	      ::= <":"> inline-tag
+<inline-tag>   	      ::= "normal" | "bold" | "title" 
+<value>        	      ::= ( word | <#"\s+"> )+
+<word>         	      ::= #"\S+"
+

@@ -1,0 +1,88 @@
+:paragraph-bordered
+:title Invoice
+:bold Invoice number: 12345
+:bold Date:
+:normal 1 June 2004
+:paragraph-bordered-left
+:bold To:
+:bold Querido cliente, S.L.
+:bold C/ de Guzman el Bueno, 256
+:bold 08001 Barcelona,
+:bold Spain
+:bold CIF: B-12345678
+:paragraph-bordered-right
+:bold Ship to:
+:table-bordered
+:row
+:cell :bold CONTACT
+:cell :bold REFERENCE
+:cell :bold DATE
+:cell foo
+:cell foo
+:cell :bold TERMS
+:row
+:cell Mike Harris
+:cell foo
+:cell foo
+:cell 01/06/04
+:cell foo
+:cell foo
+:cell 30 days left
+:table-bordered
+:row
+:cell QUANTITY
+:cell DESCRIPTION
+:cell PRICE
+:cell TOTAL
+:row-for
+:cell @item-quantity
+:cell @item-description
+:cell @item-price
+:cell @item-total
+:row
+:cell-skip
+:cell-skip
+:cell SUB TOTAL
+:cell @subtotal
+:row
+:cell-skip
+:cell-skip
+:cell VAT
+:cell @vat
+:row
+:cell-skip
+:cell-skip
+:cell :bold TOTAL
+:cell @total
+:paragraph
+:bold Intracommunitary VAT number (Mycompany): GB-123-4567-89
+:bold Intracommunitary VAT number (Client): ES-B-12345678
+:paragraph
+:bold Please make payment by telegraphic transfer to the following account:
+:table
+:row
+:cell Account name:
+:cell Mycompany Ltd
+:row
+:cell Bank:
+:cell Big Banking Corp. Coffers Street, Breadton, MN5 50F, United Kingdom
+:row
+:cell Sort code:
+:cell 12-34-56
+:row
+:cell Account number:
+:cell 78901234
+:row
+:cell :bold IBAN:
+:cell :bold GB31BIGC12345678901234
+:paragraph
+:bold If you should have any queries regarding this invoice or its payment, please call us on 123 456 789.
+:paragraph
+:bold 1 Flakey Street,
+:bold Reading, Surrey, R65 3ZZ
+:bold United Kingdom
+:paragraph-centered
+:normal Mycompany Ltd is a limited company registered in England and Wales
+:normal Registered office: 1 Flakey Street, Reading, Surrey, R65 3ZZ, United Kingdom. Company number: 01234567
+:normal Internet: http://www.mycompany.co.uk
+:normal See original here: http://mbharris.co.uk/articles/finance/eurovat/invoiceen.pdf
